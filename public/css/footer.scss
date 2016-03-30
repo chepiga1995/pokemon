@@ -1,0 +1,11 @@
+#footer {
+  background-color: $gray-light-color;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  .text-muted {
+    padding-top: 20px;
+  }
+}
