@@ -1,7 +1,6 @@
 var browserify = require('browserify');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var stringify = require('stringify');
 var source = require('vinyl-source-stream');
 var concatCss = require('gulp-concat-css');
 var uglify = require('gulp-uglify');
@@ -11,7 +10,7 @@ var babelify = require("babelify");
 
 var path = {
     css: 'public/css/style.scss',
-    js: 'public/js/main.js',
+    js: 'public/js/main.jsx',
     images: 'public/images/*',
     fonts: 'public/fonts/*'
 };
@@ -24,21 +23,16 @@ var dist = {
 };
 
 gulp.task('browserify:dev', function() {
-    return browserify(path.js)
-    .transform(stringify, {
-        appliesTo: { includeExtensions: ['.html'] }
-    })
+    return browserify({entries: path.js, debug: true})
+    .transform(babelify, {presets: ["react"]})
     .bundle()
     .pipe(source('main.js'))
     .pipe(gulp.dest(dist.js));
 });
 
 gulp.task('browserify:production', function() {
-    return browserify(path.js)
-        .transform(stringify, {
-            appliesTo: { includeExtensions: ['.html'] }
-        })
-        .transform(babelify, {presets: ["es2015"]})
+    return browserify({entries: path.js})
+        .transform(babelify, {presets: ["es2015", "react"]})
         .bundle()
         .pipe(source('main.js'))
         .pipe(buffer())

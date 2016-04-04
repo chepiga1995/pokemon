@@ -1,0 +1,56 @@
+$normal_color: #94ff5b;
+$water_color: #7b75ff;
+$fire_color: #ff835c;
+$electric_color: #feff57;
+$flying_color: #fff3d3;
+$bug_color: #ffbd3a;
+$poison_color: #ff7fe0;
+
+.min-pokemon {
+  &:hover {
+    cursor: pointer;
+  }
+  border: 2px solid $border_color;
+  margin: 10px;
+  padding: 10px;
+  img {
+    width: 100%;
+    padding: 5px;
+
+  }
+  .name{
+    text-align: center;
+    margin: 5px 0;
+  }
+  .types{
+    list-style-type: none;
+    padding: 1px;
+    overflow: hidden;
+    li {
+      float: left;
+      padding: 4px 6px;
+      border-radius: 4px;
+      margin: 5px;
+      border: 1px solid $gray-light-color;
+      background-color: $normal_color;
+      &.fire{
+        background-color: $fire_color;
+      }
+      &.electric{
+        background-color: $electric_color;
+      }
+      &.water{
+        background-color: $water_color;
+      }
+      &.flying{
+        background-color: $flying_color;
+      }
+      &.bug{
+        background-color: $bug_color;
+      }
+      &.poison{
+        background-color: $poison_color;
+      }
+    }
+  }
+}
