@@ -1,10 +1,13 @@
 
 
 #content {
-  width: 80%;
-  margin: auto;
   padding-bottom: 65px;
   overflow: hidden;
+}
+#pokemons_control{
+  clear: both;
+  float: left;
+  padding: 30px;
 }
 @import 'pokemon/pokemon-min';
 @import 'pokemon/pokemon-max';

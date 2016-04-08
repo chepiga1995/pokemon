@@ -10,7 +10,7 @@ var babelify = require("babelify");
 
 var path = {
     css: 'public/css/style.scss',
-    js: 'public/js/main.jsx',
+    js: 'public/js/main.js',
     images: 'public/images/*',
     fonts: 'public/fonts/*'
 };

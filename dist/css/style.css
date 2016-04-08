@@ -8295,10 +8295,14 @@ button.close {
 }
 
 #content {
-  width: 80%;
-  margin: auto;
   padding-bottom: 65px;
   overflow: hidden;
+}
+
+#pokemons_control {
+  clear: both;
+  float: left;
+  padding: 30px;
 }
 
 .min-pokemon {
@@ -8360,6 +8364,12 @@ button.close {
   background-color: #ff7fe0;
 }
 
+#details {
+  position: static;
+  top: 29px;
+  right: 0;
+}
+
 .max-pokemon {
   border: 2px solid #E7E7E7;
   margin: 10px;
@@ -8367,7 +8377,8 @@ button.close {
 }
 
 .max-pokemon img {
-  width: 100%;
+  width: 65%;
+  text-align: center;
   padding: 5px 15px;
 }
 

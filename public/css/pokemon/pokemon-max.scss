@@ -1,11 +1,16 @@
-
+#details {
+  position: static;
+  top: 29px;
+  right: 0;
+}
 
 .max-pokemon {
   border: 2px solid $border_color;
   margin: 10px;
   padding: 10px;
   img {
-    width: 100%;
+    width: 65%;
+    text-align: center;
     padding: 5px 15px;
 
   }
